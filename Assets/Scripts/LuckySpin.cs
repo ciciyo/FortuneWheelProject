@@ -36,6 +36,7 @@ public class LuckySpin : MonoBehaviour
     private void Start()
     {
         SetupWheel();
+        reward.LoadData();
         coinText.text = reward.coin.ToString();
         diamondText.text = reward.diamond.ToString();
 

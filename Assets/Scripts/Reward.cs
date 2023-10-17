@@ -9,7 +9,7 @@ public class Reward : MonoBehaviour
     public int diamond;
     public List<string> rewardList = new();
 
-    private void Start()
+    private void Awake()
     {
         LoadData();
     }
@@ -26,7 +26,7 @@ public class Reward : MonoBehaviour
         PlayerData data = new PlayerData();
 
         data.coin = coin;
-        data.diamond = coin;
+        data.diamond = diamond;
         data.characters = rewardList.ToArray();
 
         PlayerManager.SaveData(data);
